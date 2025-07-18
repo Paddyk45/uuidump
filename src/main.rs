@@ -52,7 +52,7 @@ struct Cli {
         short('r'),
         fallback(None),
         help(
-            "[num] amount of hex digits to keep from from the uuids (7 for laby). no truncation if not given."
+            "[num] amount of hex digits to keep from from the uuids (8 for laby). no truncation if not given."
         )
     )]
     ignored_truncation: Option<usize>,
