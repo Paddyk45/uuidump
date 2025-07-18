@@ -88,7 +88,6 @@ lazy_static! {
     static ref UUID_COUNTER: Arc<AtomicUsize> = Arc::new(AtomicUsize::new(0));
     static ref UUID_ALL_COUNTER: Arc<AtomicUsize> = Arc::new(AtomicUsize::new(0));
     static ref REQ_COUNTER: Arc<AtomicUsize> = Arc::new(AtomicUsize::new(0));
-    static ref TOTAL_REQUESTS: OnceLock<usize> = OnceLock::new();
 }
 
 #[tokio::main]
