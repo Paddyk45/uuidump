@@ -253,7 +253,10 @@ async fn request(names: Vec<String>) -> Vec<(Uuid, String)> {
     let mut pls = vec![];
     for pl in res.as_array().unwrap() {
         UUID_ALL_COUNTER.fetch_add(1, Ordering::SeqCst);
-        pls.push((Uuid::from_str(pl["id"].as_str().unwrap()).unwrap(), pl["name"].as_str().unwrap().to_string()));
+        pls.push((
+            Uuid::from_str(pl["id"].as_str().unwrap()).unwrap(),
+            pl["name"].as_str().unwrap().to_string(),
+        ));
     }
     pls
 }
