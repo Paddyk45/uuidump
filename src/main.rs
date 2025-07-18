@@ -28,6 +28,7 @@ struct Cli {
     #[bpaf(
         argument("THREADS"),
         short('t'),
+        long("threads"),
         fallback(80),
         help("[num] how many threads to spawn for making requests.")
     )]
@@ -35,12 +36,14 @@ struct Cli {
     #[bpaf(
         argument("OUTPUT"),
         short('o'),
+        long("threads"),
         help("[path] where to output uuids to.")
     )]
     output_path: String,
     #[bpaf(
         argument("IGNORED"),
         short('i'),
+        long("ignored-uuids"),
         fallback(None),
         help(
             "[path] which uuids to ignore if found. useful in combination with one of mats uuid dumps. if not given, don't ignore any uuids."
@@ -48,17 +51,19 @@ struct Cli {
     )]
     ignored: Option<String>,
     #[bpaf(
-        argument("INGNORED_TRUNCATION"),
+        argument("IGNORED_TRUNCATION"),
         short('r'),
+        long("ignored-truncation"),
         fallback(None),
         help(
-            "[num] amount of hex digits to keep from from the uuids (8 for laby). no truncation if not given."
+            "[num] amount of hex digits to keep from from the ignored uuids (8 for laby). no truncation if not given."
         )
     )]
     ignored_truncation: Option<usize>,
     #[bpaf(
         argument("SUFFIXES"),
         short('s'),
+        long("suffixes"),
         fallback(None),
         help(
             "[path] list of suffixes to append to each word in the wordlist. words with no suffixes will not be kept. no suffixing if not given."
@@ -67,6 +72,7 @@ struct Cli {
     suffixes: Option<String>,
     #[bpaf(
         short('a'),
+        long("print-ignored"),
         fallback(false),
         switch,
         help("whether to print ignored uuids in a gray color.")

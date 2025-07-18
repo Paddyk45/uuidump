@@ -4,16 +4,16 @@ small program for scraping minecraft uuids from mojangs api using https://mowoja
 help (pass -h):
 ```
 -w, --wordlist-path=WORDLIST  [path] the file to pull the names from. all non-mc-name characters
-                        will be nuked.
--t=THREADS              [num] how many threads to spawn for making requests.
--o=OUTPUT               [path] where to output uuids to.
--i=IGNORED              [path] which uuids to ignore if found. useful in combination with one of
-                        mats uuid dumps. if not given, don't ignore any uuids.
--r=INGNORED_TRUNCATION  [num] amount of hex digits to keep from from the uuids (7 for laby). no
-                        truncation if not given.
--s=SUFFIXES             [path] list of suffixes to append to each word in the wordlist. words
-                        with no suffixes will not be kept. no suffixing if not given.
--a                      whether to print ignored uuids in a gray color.
+                         will be nuked.
+-t, --threads=THREADS    [num] how many threads to spawn for making requests.
+-o, --threads=OUTPUT     [path] where to output uuids to.
+-i, --ignored-uuids=IGNORED  [path] which uuids to ignore if found. useful in combination with
+                         one of mats uuid dumps. if not given, don't ignore any uuids.
+-r, --ignored-truncation=IGNORED_TRUNCATION  [num] amount of hex digits to keep from from the
+                         ignored uuids (8 for laby). no truncation if not given.
+-s, --suffixes=SUFFIXES  [path] list of suffixes to append to each word in the wordlist. words
+                         with no suffixes will not be kept. no suffixing if not given.
+-a, --print-ignored      whether to print ignored uuids in a gray color.
 ```
 
 examples:
