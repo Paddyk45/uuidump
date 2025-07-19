@@ -21,5 +21,5 @@ examples:
 uuidump -w users.txt -t 200 -o found.txt # scrape `users.txt` with 200 threads and output them to `found.txt`.
 uuidump -w users.txt -i ignores.txt -o found.txt # ignore all uuids from `users.txt`.
 uuidump -w users.txt -i truncated_uuids.txt -r 8 -o found.txt # ignore using laby uuid hashes (collisions will lose results!).
-uuidump -w users.txt -s suffixes.txt found.txt # apply all suffixes in `suffixes.txt` to every word in wordlist.
+uuidump -w users.txt -s suffixes.txt -o found.txt # apply all suffixes in `suffixes.txt` to every word in wordlist.
 ```
