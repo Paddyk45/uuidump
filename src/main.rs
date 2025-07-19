@@ -44,7 +44,7 @@ struct Cli {
         argument("IGNORED"),
         short('i'),
         long("ignored-uuids"),
-        fallback(None),
+        optional,
         help(
             "[path] which uuids to ignore if found. useful in combination with one of mats uuid dumps. if not given, don't ignore any uuids."
         )
@@ -54,7 +54,7 @@ struct Cli {
         argument("IGNORED_TRUNCATION"),
         short('r'),
         long("ignored-truncation"),
-        fallback(None),
+        optional,
         help(
             "[num] amount of hex digits to keep from from the ignored uuids (8 for laby). no truncation if not given."
         )
@@ -64,7 +64,7 @@ struct Cli {
         argument("SUFFIXES"),
         short('s'),
         long("suffixes"),
-        fallback(None),
+        optional,
         help(
             "[path] list of suffixes to append to each word in the wordlist. words with no suffixes will not be kept. no suffixing if not given."
         )
@@ -73,7 +73,6 @@ struct Cli {
     #[bpaf(
         short('a'),
         long("print-ignored"),
-        fallback(false),
         switch,
         help("whether to print ignored uuids in a gray color.")
     )]
