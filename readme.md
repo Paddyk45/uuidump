@@ -23,3 +23,6 @@ uuidump -w users.txt -i ignores.txt -o found.txt # ignore all uuids from `users.
 uuidump -w users.txt -i truncated_uuids.txt -r 8 -o found.txt # ignore using laby uuid hashes (collisions will lose results!).
 uuidump -w users.txt -s suffixes.txt -o found.txt # apply all suffixes in `suffixes.txt` to every word in wordlist.
 ```
+
+demo:
+[![asciicast](https://asciinema.org/a/bMHT7TYXJTTjsKETeamKCBioe.svg)](https://asciinema.org/a/bMHT7TYXJTTjsKETeamKCBioe)

@@ -8,7 +8,7 @@ use std::collections::HashSet;
 use std::io::{Write, stdout};
 use std::str::FromStr;
 use std::sync::atomic::{AtomicUsize, Ordering};
-use std::sync::{Arc, OnceLock};
+use std::sync::Arc;
 use std::thread::{sleep, spawn};
 use std::time::Duration;
 use tokio::io::AsyncWriteExt;
