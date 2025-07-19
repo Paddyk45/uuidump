@@ -73,7 +73,6 @@ struct Cli {
     #[bpaf(
         short('a'),
         long("print-ignored"),
-        fallback(false),
         switch,
         help("whether to print ignored uuids in a gray color.")
     )]
