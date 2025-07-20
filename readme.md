@@ -6,7 +6,7 @@ help (pass -h):
 -w, --wordlist-path=WORDLIST  [path] the file to pull the names from. all non-mc-name characters
                          will be nuked.
 -t, --threads=THREADS    [num] how many threads to spawn for making requests.
--o, --threads=OUTPUT     [path] where to output uuids to.
+-o, --output=OUTPUT     [path] where to output uuids to.
 -i, --ignored-uuids=IGNORED  [path] which uuids to ignore if found. useful in combination with
                          one of mats uuid dumps. if not given, don't ignore any uuids.
 -r, --ignored-truncation=IGNORED_TRUNCATION  [num] amount of hex digits to keep from from the
