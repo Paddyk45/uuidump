@@ -36,7 +36,7 @@ struct Cli {
     #[bpaf(
         argument("OUTPUT"),
         short('o'),
-        long("threads"),
+        long("output"),
         help("[path] where to output uuids to.")
     )]
     output_path: String,
