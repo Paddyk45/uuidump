@@ -7,8 +7,8 @@ use serde_json::json;
 use std::collections::HashSet;
 use std::io::{Write, stdout};
 use std::str::FromStr;
-use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Arc;
+use std::sync::atomic::{AtomicUsize, Ordering};
 use std::thread::{sleep, spawn};
 use std::time::Duration;
 use tokio::io::AsyncWriteExt;
@@ -247,7 +247,14 @@ async fn request(names: Vec<String>) -> Vec<(Uuid, String)> {
         .send()
         .await
     {
-        Ok(res) => res.json().await.unwrap(),
+        Ok(res) => {
+            if let Ok(json) = res.json().await {
+                json
+            } else {
+                eprintln!("failed to parse response json");
+                return vec![];
+            }
+        }
         Err(e) => {
             eprintln!("mowojang api request failed: {e:?}");
             return vec![];
