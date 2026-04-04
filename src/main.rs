@@ -1,4 +1,3 @@
-#![feature(iter_array_chunks)]
 #![warn(clippy::nursery, clippy::pedantic)]
 
 use bpaf::Bpaf;
